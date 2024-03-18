@@ -440,3 +440,51 @@ footer .inner ul.list li {
 footer .inner ul.list li:last-child {
   font-weight: 700;
 }
+
+
+/* 반응형 웹 디자인 */
+/* 노트북 해상도 1600px 미만 */
+@media (max-width: 1600px) {
+
+  header .inner-header, section .sub-container, footer .inner {
+    width: 95%
+  }
+
+  header .inner-header .gnb {
+    margin-left: 50px;
+  }
+  header .inner-header .gnb li {
+    margin-right: 20px;
+  }
+  section.main .main-title {
+    width: 70%;
+  }
+}
+
+
+/* 태블릿 L사이즈, 노트북 S사이즈 해상도 */
+@media (max-width: 1024px) {
+
+  section.main {
+    height: 80vh;
+  }
+  header .inner-header nav {
+    display: none;
+  }
+  header .inner-header .gnb-mobile {
+    display: block;
+    font-size: 40px;
+    color: white;
+    float: right;
+  }
+  section.main .main-title h2 {
+    font-size: 40px;
+  }
+  section.innovation .sub-container {
+    height: 45vh;
+  }
+  footer .inner .list {
+    display: none;
+  }
+  }
+  

@@ -22,7 +22,10 @@ header .inner-header .logo {
 }
 header .inner-header .logo img {
   width: 100%;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
+
 header .inner-header .gnb {
   /* border: 3px solid red; */
   float: left;
@@ -80,12 +83,26 @@ section.main {
   background: url(../img/vis_4.jpg) no-repeat center/cover fixed;
   height: 100vh;
   position: relative;
+
 }
 section.main .main-title {
   /* background: red; */
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 10px #000;
+
+  animation: uprise 0.5s 1 linear backwards;
+}
+@keyframes uprise {
+  from {
+    top: 60%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 section.main .main-title h2 {
   font-size: 55px;
@@ -94,6 +111,7 @@ section.main .main-title p {
   font-size: 25px;
   margin: 20px 0;
 }
+
 section.main .main-title .view {
   font-size: 15px;
   letter-spacing: 2px;
